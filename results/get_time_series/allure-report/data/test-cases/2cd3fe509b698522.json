@@ -1,0 +1,147 @@
+{
+  "uid" : "2cd3fe509b698522",
+  "name" : "Validate Get time series resource for given \"Validate get time series api returns error for invalid function value\" and \"API_GTS_InValid_001\" -- @1.1 ",
+  "historyId" : "2264a1e7f0fdf5190c2559bf0aca9f1d",
+  "time" : {
+    "start" : 1627638240078,
+    "stop" : 1627638241231,
+    "duration" : 1153
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given end point of get time resource along with query param as \"[\"function\",\"symbol\",\"apikey\"]\" and query value as \"[\"TIME_SERIES\",\"IBM\",\"LVDWZYDOWUB07C36\"]\"",
+      "time" : {
+        "start" : 1627638240079,
+        "stop" : 1627638240083,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "15a93c1dd279a6ba",
+        "name" : "End point of the time series api with query data is",
+        "source" : "15a93c1dd279a6ba.attach",
+        "type" : "text/plain",
+        "size" : 33
+      } ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "When send request to the server for the time series endpoint along with query data",
+      "time" : {
+        "start" : 1627638240083,
+        "stop" : 1627638241171,
+        "duration" : 1088
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "f487fab91efaddf4",
+        "name" : "Response messages of the request for ",
+        "source" : "f487fab91efaddf4.attach",
+        "type" : "text/plain",
+        "size" : 74
+      } ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Then validate server response code \"200\"",
+      "time" : {
+        "start" : 1627638241171,
+        "stop" : 1627638241175,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "e2e6aabbc9da42c5",
+        "name" : "Expected response code 200 and actual response code 200",
+        "source" : "e2e6aabbc9da42c5.attach",
+        "type" : "text/plain",
+        "size" : 3
+      } ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Then Validate server response error messages for \"API_GTS_InValid_001\"",
+      "time" : {
+        "start" : 1627638241175,
+        "stop" : 1627638241231,
+        "duration" : 56
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 3,
+    "stepsCount" : 4,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "negative-Scenarios"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Validate Get Time Series Daily API with valid and invalid combination of data."
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "query_param",
+    "value" : "[\"function\",\"symbol\",\"apikey\"]"
+  }, {
+    "name" : "query_value",
+    "value" : "[\"TIME_SERIES\",\"IBM\",\"LVDWZYDOWUB07C36\"]"
+  }, {
+    "name" : "response_code",
+    "value" : "200"
+  }, {
+    "name" : "test_case_id",
+    "value" : "API_GTS_InValid_001"
+  }, {
+    "name" : "test_type",
+    "value" : "Validate get time series api returns error for invalid function value"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "negative-Scenarios" ]
+  },
+  "source" : "2cd3fe509b698522.json",
+  "parameterValues" : [ "[\"function\",\"symbol\",\"apikey\"]", "[\"TIME_SERIES\",\"IBM\",\"LVDWZYDOWUB07C36\"]", "200", "API_GTS_InValid_001", "Validate get time series api returns error for invalid function value" ]
+}
