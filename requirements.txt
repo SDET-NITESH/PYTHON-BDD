@@ -12,7 +12,7 @@ warnings
 
 """Instructions to run the test"""
 1. Inside the runner file there is one batch file present go ahead and run the batch file, but that would require changes to be dome in the base pat.
-2. Another way is execute the below batch file command in terminal of your IDE.This will also generate allure report.
+2. Another way is execute the below batch file command in terminal of your IDE.This will also generate allure report.Please do make sure to go to the respective result folder where results need to be stored in terminal path.
 
 behave -i get_time_series_daily.feature -f allure_behave.formatter:AllureFormatter -o allure-results  & allure generate results/ --clean allure-results
 
