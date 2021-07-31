@@ -9,11 +9,15 @@ import json
 import allure
 import requests
 import warnings
+from ratelimit import limits, sleep_and_retry
 from itertools import  zip_longest
 from urllib3.exceptions import  InsecureRequestWarning
 warnings.simplefilter('ignore',InsecureRequestWarning)
 fileDir = os.path.dirname(os.path.realpath(__file__))
-
+MAX_CALLS = 5
+MAX_TIME = 60
+MAX_CALLS_DAY = 500
+MAX_TIME_DAY = 86400
 
 ref_query_param = '["?","&","&","&"]'
 ref_query_value = '["=","=","=","="]'
@@ -37,8 +41,9 @@ def sorted_collection_data(input_data_sorting,sorted_parameter):
     sorted_data = sorted(input_data_sorting, key=lambda k: k[sorted_parameter])
     return sorted_data
 
-
-
+@sleep_and_retry
+@limits(calls=MAX_CALLS, period=MAX_TIME)
+@limits(calls=MAX_CALLS_DAY, period=MAX_TIME_DAY)
 def get_request(endpoint, cookie_value =None, headers=None, **kwargs):
     """
      method send the get request endpoint with multiple query parameters, it can include valid values or invalid values

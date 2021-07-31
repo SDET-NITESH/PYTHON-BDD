@@ -40,7 +40,10 @@ def send_request_for_time_series(context):
 
     """
     query_data = generate_query_data(context.query_param, context.query_value)
-    context.response = get_request(context.end_point, **query_data)
+    try:
+        context.response = get_request(context.end_point, **query_data)
+    except Exception as e:
+        print("Exception Occured ",e)
     capture_log_pretty_json(context.response.text, "Response messages of the request for " )
 
 
